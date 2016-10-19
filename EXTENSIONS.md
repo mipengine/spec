@@ -1,14 +1,17 @@
 # MIP 扩展组件规范
 
+为了保持统一和增强组件的可用性，扩展组件开发需要遵守此规范。
+
 ## 目录结构
 
 以sample组件为例：
-mip-extensions
-    - mip-sample
-        - mip-sample.js
-        - mip-sample.less
-        - package.json
-        - READMD.md
+
+    mip-extensions
+        - mip-sample
+            - mip-sample.js
+            - mip-sample.less
+            - package.json
+            - READMD.md
 
 注：其中 package.json READMD.md mip-sample.js 为必要文件，mip-sample.less 为可选文件，是否选用以具体组件为准。
 
@@ -45,11 +48,20 @@ mip-extensions
 必填：是  
 取值：以1.0.0为起始版本  
 
-
 #### contributors
 
 描述：代码贡献者  
 必填：是  
+
+#### engines
+
+描述：组件的依赖的文件版本，主要是mip.js  
+必填：是  
+格式：
+    
+    {
+        "mip": "1.0.0"
+    }
 
 ## README.md 规范
 
@@ -71,9 +83,9 @@ mip-extensions
 
 [示例介绍]  
 
-```html
-[<p>Html code</p>]
-```
+    ```html
+    [<p>Html code</p>]
+    ```
 
 ## 属性
 
@@ -100,6 +112,7 @@ mip-extensions
 
 注：  
 1、其中"[]"意味着需要开发者手动添写。如开发了mip-demo组件，那么"[标题]"需要替换成"mip-demo"
+
 2、类型说明：组件应注明属于哪种类型。我们定义了几种组件类型，组件的类型可以是一个也可以是多个，多个类型以","分隔。如果需要增加其它类型，可与我们联系。
     - 通用：表示组件是通用的组件，组件定位是所有网站可用  
     - 业务：即所开发网站的业务组件，不具有通用性
@@ -107,8 +120,9 @@ mip-extensions
     - 定制：针对某个网站或某种业务的组件，具有一定通用性，如视频网站的播放组件
 
 以优酷视频播放组件为例，它的类型应该是：通用,定制  
+
 3、布局说明：布局应在官网提供的布局中选用几种。具体布局介绍见官网[组件布局](https://www.mipengine.org/doc/4-widget/1-widgetlayout.html)  
-4、属性说明字段：属性说明字段用于说明一个属性应该怎样使用，有什么限制等。格式为 "字段名：字段内容"。字段应该在下面几种里选用
+
 4、在 "##" 的二级标题中，"示例" 是必选项，"属性" 在组件需要加属性的情况下也是必填字段，"注意事项" 表示附加说明，可选用。二级标题暂只可用这三种，如果需要增加其它标题，可以联系我们增加。
 
 ### 示例
