@@ -1,0 +1,41 @@
+{
+  "name": "spec",
+  "version": "1.0.0",
+  "description": "MIP 规范集合",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "validate-commit-msg"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore",
+        "revert",
+        "release"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/spec.git"
+  },
+  "keywords": [
+    "MIP"
+  ],
+  "author": "mipengine <mip-support@baidu.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/spec/issues"
+  },
+  "homepage": "https://github.com/mipengine/spec#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.14.0"
+  }
+}
